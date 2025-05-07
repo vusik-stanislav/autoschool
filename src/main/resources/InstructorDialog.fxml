@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.InstructorDialogController" spacing="10" style="-fx-padding: 10;">
+    <Label text="Имя"/>
+    <TextField fx:id="nameField"/>
+    <Label text="Телефон"/>
+    <TextField fx:id="phoneField"/>
+    <Label text="Дата приема на работу"/>
+    <DatePicker fx:id="hireDatePicker"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="OK" onAction="#handleOk"/>
+        <Button text="Отмена" onAction="#handleCancel"/>
+    </HBox>
+</VBox>

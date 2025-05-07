@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.MainController">
+    <TabPane>
+        <Tab text="Инструкторы" closable="false">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <TableView fx:id="instructorTable">
+                    <columns>
+                        <TableColumn fx:id="instructorIdColumn" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="instructorNameColumn" text="Имя" prefWidth="200"/>
+                        <TableColumn fx:id="instructorPhoneColumn" text="Телефон" prefWidth="150"/>
+                        <TableColumn fx:id="instructorHireDateColumn" text="Дата приема" prefWidth="150"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10">
+                    <Button text="Добавить" onAction="#handleAddInstructor"/>
+                    <Button text="Изменить" onAction="#handleEditInstructor"/>
+                    <Button text="Удалить" onAction="#handleDeleteInstructor"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="Обучающиеся" closable="false">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <TableView fx:id="studentTable">
+                    <columns>
+                        <TableColumn fx:id="studentIdColumn" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="studentNameColumn" text="Имя" prefWidth="200"/>
+                        <TableColumn fx:id="studentPhoneColumn" text="Телефон" prefWidth="150"/>
+                        <TableColumn fx:id="studentEmailColumn" text="Email" prefWidth="200"/>
+                        <TableColumn fx:id="studentRegDateColumn" text="Дата регистрации" prefWidth="150"/>
+                        <TableColumn fx:id="studentGroupColumn" text="Группа" prefWidth="150"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10">
+                    <Button text="Добавить" onAction="#handleAddStudent"/>
+                    <Button text="Изменить" onAction="#handleEditStudent"/>
+                    <Button text="Удалить" onAction="#handleDeleteStudent"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="Группы" closable="false">
+            <VBox spacing="10" style="-fx-padding: 10;">
+                <TableView fx:id="groupTable">
+                    <columns>
+                        <TableColumn fx:id="groupIdColumn" text="ID" prefWidth="50"/>
+                        <TableColumn fx:id="groupNameColumn" text="Название" prefWidth="200"/>
+                        <TableColumn fx:id="groupStartDateColumn" text="Дата начала" prefWidth="150"/>
+                        <TableColumn fx:id="groupEndDateColumn" text="Дата окончания" prefWidth="150"/>
+                        <TableColumn fx:id="groupInstructorColumn" text="Инструктор" prefWidth="200"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="10">
+                    <Button text="Добавить" onAction="#handleAddGroup"/>
+                    <Button text="Изменить" onAction="#handleEditGroup"/>
+                    <Button text="Удалить" onAction="#handleDeleteGroup"/>
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>
