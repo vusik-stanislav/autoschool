@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.StudentDialogController" spacing="10" style="-fx-padding: 10;">
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.StudentDialogController" spacing="10" style="-fx-padding: 15;">
     <Label text="Имя"/>
     <TextField fx:id="nameField"/>
     <Label text="Телефон"/>

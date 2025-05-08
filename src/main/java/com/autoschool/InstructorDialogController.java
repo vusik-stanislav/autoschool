@@ -49,7 +49,7 @@ public class InstructorDialogController {
     }
 
     @FXML
-    private void handleOk() {
+    void handleOk() {
         if (isInputValid()) {
             okClicked = true;
             dialogStage.close();
@@ -57,7 +57,7 @@ public class InstructorDialogController {
     }
 
     @FXML
-    private void handleCancel() {
+    void handleCancel() {
         dialogStage.close();
     }
 

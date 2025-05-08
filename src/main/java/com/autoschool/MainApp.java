@@ -1,4 +1,3 @@
-// MainApp.java
 package com.autoschool;
 
 import javafx.application.Application;
@@ -10,7 +9,8 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Main.fxml"));
-        Scene scene = new Scene(loader.load(), 800, 600);
+        Scene scene = new Scene(loader.load(), 800, 520);
+        scene.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
         primaryStage.setTitle("Автошкола");
         primaryStage.setScene(scene);
         primaryStage.show();

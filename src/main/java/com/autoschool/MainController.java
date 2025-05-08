@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 public class MainController {
@@ -46,6 +46,7 @@ public class MainController {
     private ObservableList<Instructor> instructorData = FXCollections.observableArrayList();
     private ObservableList<Student> studentData = FXCollections.observableArrayList();
     private ObservableList<Group> groupData = FXCollections.observableArrayList();
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     @FXML
     private void initialize() {
@@ -60,6 +61,17 @@ public class MainController {
         instructorNameColumn.setCellValueFactory(new PropertyValueFactory<>("instructorName"));
         instructorPhoneColumn.setCellValueFactory(new PropertyValueFactory<>("phone"));
         instructorHireDateColumn.setCellValueFactory(new PropertyValueFactory<>("hireDate"));
+        instructorHireDateColumn.setCellFactory(column -> new TableCell<>() {
+            @Override
+            protected void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                if (empty || date == null) {
+                    setText(null);
+                } else {
+                    setText(DATE_FORMATTER.format(date));
+                }
+            }
+        });
         instructorTable.setItems(instructorData);
     }
 
@@ -69,6 +81,17 @@ public class MainController {
         studentPhoneColumn.setCellValueFactory(new PropertyValueFactory<>("phone"));
         studentEmailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         studentRegDateColumn.setCellValueFactory(new PropertyValueFactory<>("registrationDate"));
+        studentRegDateColumn.setCellFactory(column -> new TableCell<>() {
+            @Override
+            protected void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                if (empty || date == null) {
+                    setText(null);
+                } else {
+                    setText(DATE_FORMATTER.format(date));
+                }
+            }
+        });
         studentGroupColumn.setCellValueFactory(cellData -> {
             Group group = cellData.getValue().getGroup();
             return new javafx.beans.property.SimpleStringProperty(group != null ? group.getGroupName() : "");
@@ -80,7 +103,29 @@ public class MainController {
         groupIdColumn.setCellValueFactory(new PropertyValueFactory<>("groupId"));
         groupNameColumn.setCellValueFactory(new PropertyValueFactory<>("groupName"));
         groupStartDateColumn.setCellValueFactory(new PropertyValueFactory<>("startDate"));
+        groupStartDateColumn.setCellFactory(column -> new TableCell<>() {
+            @Override
+            protected void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                if (empty || date == null) {
+                    setText(null);
+                } else {
+                    setText(DATE_FORMATTER.format(date));
+                }
+            }
+        });
         groupEndDateColumn.setCellValueFactory(new PropertyValueFactory<>("endDate"));
+        groupEndDateColumn.setCellFactory(column -> new TableCell<>() {
+            @Override
+            protected void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                if (empty || date == null) {
+                    setText(null);
+                } else {
+                    setText(DATE_FORMATTER.format(date));
+                }
+            }
+        });
         groupInstructorColumn.setCellValueFactory(cellData -> {
             Instructor instructor = cellData.getValue().getInstructor();
             return new javafx.beans.property.SimpleStringProperty(instructor != null ? instructor.getInstructorName() : "");
@@ -88,7 +133,7 @@ public class MainController {
         groupTable.setItems(groupData);
     }
 
-    private void loadData() {
+    void loadData() {
         try {
             instructorData.setAll(apiClient.getInstructors());
             studentData.setAll(apiClient.getStudents());
@@ -114,7 +159,7 @@ public class MainController {
     }
 
     @FXML
-    private void handleDeleteInstructor() {
+    void handleDeleteInstructor() {
         Instructor selected = instructorTable.getSelectionModel().getSelectedItem();
         if (selected != null && confirmDelete("инструктора")) {
             try {
@@ -142,7 +187,7 @@ public class MainController {
     }
 
     @FXML
-    private void handleDeleteStudent() {
+    void handleDeleteStudent() {
         Student selected = studentTable.getSelectionModel().getSelectedItem();
         if (selected != null && confirmDelete("обучающегося")) {
             try {
@@ -170,7 +215,7 @@ public class MainController {
     }
 
     @FXML
-    private void handleDeleteGroup() {
+    void handleDeleteGroup() {
         Group selected = groupTable.getSelectionModel().getSelectedItem();
         if (selected != null && confirmDelete("группу")) {
             try {
@@ -282,11 +327,12 @@ public class MainController {
                 }
             }
         } catch (IOException e) {
+            e.printStackTrace();
             showError("Ошибка открытия диалога: " + e.getMessage());
         }
     }
 
-    private boolean confirmDelete(String entity) {
+    boolean confirmDelete(String entity) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Подтверждение удаления");
         alert.setHeaderText("Вы уверены, что хотите удалить " + entity + "?");
@@ -294,7 +340,6 @@ public class MainController {
         return result.isPresent() && result.get() == ButtonType.OK;
     }
 
-    // Статический метод для вызова showError из других классов
     public static void showError(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Ошибка");

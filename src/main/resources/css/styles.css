@@ -1,0 +1,91 @@
+/* Общие стили */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f5f5f5;
+}
+
+/* Стили для вкладок */
+.tab-pane .tab-header-area .tab {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 5 15 5 15;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: #333;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+/* Стили для таблиц */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d3d3d3;
+}
+
+.table-view .column-header {
+    -fx-text-fill: white;
+    -fx-background-color: #1976d2;
+
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e3f2fd;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: white;
+}
+
+/* Стили для кнопок */
+.button {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: white;
+    -fx-padding: 8 15 8 15;
+    -fx-background-radius: 5;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: #1565c0;
+}
+
+.button:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+/* Стили для диалоговых окон */
+.dialog-pane {
+    -fx-background-color: #f5f5f5;
+}
+
+.dialog-pane .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.dialog-pane .text-field, .dialog-pane .combo-box, .dialog-pane .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 3;
+    -fx-padding: 5;
+}
+
+.dialog-pane .button {
+    -fx-min-width: 80px;
+}

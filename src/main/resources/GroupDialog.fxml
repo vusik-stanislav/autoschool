@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.GroupDialogController" spacing="10" style="-fx-padding: 10;">
-    <Label text="Название группы"/>
-    <TextField fx:id="nameField"/>
-    <Label text="Дата начала"/>
-    <DatePicker fx:id="startDatePicker"/>
-    <Label text="Дата окончания"/>
-    <DatePicker fx:id="endDatePicker"/>
-    <Label text="Инструктор"/>
-    <ComboBox fx:id="instructorComboBox"/>
-    <HBox spacing="10" alignment="CENTER">
-        <Button text="OK" onAction="#handleOk"/>
-        <Button text="Отмена" onAction="#handleCancel"/>
+<VBox prefHeight="309.0" prefWidth="221.0" spacing="10" style="-fx-padding: 15;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.GroupDialogController">
+    <stylesheets>
+        <URL value="@/css/styles.css" />
+    </stylesheets>
+    <Label text="Название группы" />
+    <TextField fx:id="nameField" />
+    <Label text="Дата начала" />
+    <DatePicker fx:id="startDatePicker" />
+    <Label text="Дата окончания" />
+    <DatePicker fx:id="endDatePicker" />
+    <Label text="Инструктор" />
+    <ComboBox fx:id="instructorComboBox" prefHeight="24.0" prefWidth="189.0" />
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#handleOk" prefHeight="32.0" prefWidth="78.0" text="OK" />
+        <Button onAction="#handleCancel" text="Отмена" />
     </HBox>
 </VBox>

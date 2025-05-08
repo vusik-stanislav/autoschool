@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.MainController">
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.MainController" spacing="10">
     <TabPane>
         <Tab text="Инструкторы" closable="false">
             <VBox spacing="10" style="-fx-padding: 10;">
@@ -15,7 +16,7 @@
                         <TableColumn fx:id="instructorHireDateColumn" text="Дата приема" prefWidth="150"/>
                     </columns>
                 </TableView>
-                <HBox spacing="10">
+                <HBox spacing="10" alignment="CENTER">
                     <Button text="Добавить" onAction="#handleAddInstructor"/>
                     <Button text="Изменить" onAction="#handleEditInstructor"/>
                     <Button text="Удалить" onAction="#handleDeleteInstructor"/>
@@ -34,7 +35,7 @@
                         <TableColumn fx:id="studentGroupColumn" text="Группа" prefWidth="150"/>
                     </columns>
                 </TableView>
-                <HBox spacing="10">
+                <HBox spacing="10" alignment="CENTER">
                     <Button text="Добавить" onAction="#handleAddStudent"/>
                     <Button text="Изменить" onAction="#handleEditStudent"/>
                     <Button text="Удалить" onAction="#handleDeleteStudent"/>
@@ -52,7 +53,7 @@
                         <TableColumn fx:id="groupInstructorColumn" text="Инструктор" prefWidth="200"/>
                     </columns>
                 </TableView>
-                <HBox spacing="10">
+                <HBox spacing="10" alignment="CENTER">
                     <Button text="Добавить" onAction="#handleAddGroup"/>
                     <Button text="Изменить" onAction="#handleEditGroup"/>
                     <Button text="Удалить" onAction="#handleDeleteGroup"/>
