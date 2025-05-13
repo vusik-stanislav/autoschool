@@ -6,7 +6,7 @@ public class GroupDto {
     private String groupName;
     private LocalDate startDate;
     private LocalDate endDate;
-    private Long instructorId;
+    private int instructorId;
 
     public String getGroupName() {
         return groupName;
@@ -32,11 +32,11 @@ public class GroupDto {
         this.endDate = endDate;
     }
 
-    public Long getInstructorId() {
+    public int getInstructorId() {
         return instructorId;
     }
 
-    public void setInstructorId(Long instructorId) {
+    public void setInstructorId(int instructorId) {
         this.instructorId = instructorId;
     }
 }

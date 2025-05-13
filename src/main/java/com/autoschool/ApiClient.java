@@ -1,6 +1,7 @@
 package com.autoschool;
 
 import com.autoschool.model.Group;
+import com.autoschool.model.GroupDto;
 import com.autoschool.model.Instructor;
 import com.autoschool.model.Student;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -102,7 +103,13 @@ public class ApiClient {
     }
 
     public void createGroup(Group group) throws Exception {
-        String json = mapper.writeValueAsString(group);
+        GroupDto dto = new GroupDto();
+        dto.setGroupName(group.getGroupName());
+        dto.setStartDate(group.getStartDate());
+        dto.setEndDate(group.getEndDate());
+        dto.setInstructorId(group.getInstructor().getInstructorId());
+
+        String json = mapper.writeValueAsString(dto);
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(BASE_URL + "groups"))
                 .header("Content-Type", "application/json")

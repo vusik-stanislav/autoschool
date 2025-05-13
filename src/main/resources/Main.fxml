@@ -4,7 +4,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.autoschool.MainController" spacing="10">
+    <stylesheets>
+        <URL value="@/css/styles.css" />
+    </stylesheets>
     <TabPane>
         <Tab text="Инструкторы" closable="false">
             <VBox spacing="10" style="-fx-padding: 10;">

@@ -52,4 +52,9 @@ public class Instructor {
     public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
     }
+
+    @Override
+    public String toString() {
+        return instructorName;
+    }
 }

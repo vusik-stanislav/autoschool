@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="400eb8a6-a9a8-4720-873b-b5bdf88d2486" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/autoschool/ApiClientTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/autoschool/InstructorDialogControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/model/GroupDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoschool/InstructorDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/InstructorDialogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoschool/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoschool/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoschool/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/model/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GroupDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GroupDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/InstructorDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/InstructorDialog.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoschool/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/autoschool/model/Instructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/autoschool/model/Instructor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/StudentDialog.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StudentDialog.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,30 +36,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MainApp.executor": "Run",
-    "JUnit.ApiClientTest.executor": "Run",
-    "JUnit.InstructorDialogControllerTest.executor": "Debug",
-    "JUnit.MainControllerTest.executor": "Run",
-    "Maven.autoschool [test].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/opt/idea-pro/bsuir/autoschool/src/test/java",
-    "last_opened_file_path": "/opt/idea-pro/bsuir/autoschool",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.14509481",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiClientTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InstructorDialogControllerTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.MainControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.autoschool [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.autoschool [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/opt/idea-pro/bsuir/autoschool/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/opt/idea-pro/films-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.14509481&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -90,7 +84,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InstructorDialogControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="autoschool" />
       <extension name="coverage">
         <pattern>
@@ -99,7 +93,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.autoschool" />
-      <option name="MAIN_CLASS_NAME" value="com.autoschool.InstructorDialogControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.autoschool.ApiClientTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea --module-path &quot;/usr/share/openjfx/lib&quot; --add-modules javafx.controls,javafx.fxml --add-exports=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED --add-opens=javafx.graphics/com.sun.javafx.application=ALL-UNNAMED" />
@@ -109,12 +103,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.MainApp" />
-      <item itemvalue="JUnit.InstructorDialogControllerTest" />
+      <item itemvalue="JUnit.ApiClientTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
-        <item itemvalue="JUnit.InstructorDialogControllerTest" />
+        <item itemvalue="JUnit.ApiClientTest" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +122,9 @@
       <updated>1746618104940</updated>
       <workItem from="1746618105994" duration="4587000" />
       <workItem from="1746622722230" duration="48000" />
-      <workItem from="1746622831004" duration="12653000" />
+      <workItem from="1746622831004" duration="21645000" />
+      <workItem from="1746718403637" duration="67000" />
+      <workItem from="1747037451815" duration="2331000" />
     </task>
     <servers />
   </component>
